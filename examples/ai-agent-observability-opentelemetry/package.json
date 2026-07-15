@@ -1,0 +1,22 @@
+{
+  "name": "ai-agent-observability-opentelemetry-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "demo": "tsx src/main.ts",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "1.9.1",
+    "@opentelemetry/exporter-trace-otlp-http": "0.220.0",
+    "@opentelemetry/resources": "2.9.0",
+    "@opentelemetry/sdk-trace-base": "2.9.0",
+    "@opentelemetry/sdk-trace-node": "2.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.14",
+    "tsx": "4.23.1",
+    "typescript": "7.0.2"
+  }
+}
