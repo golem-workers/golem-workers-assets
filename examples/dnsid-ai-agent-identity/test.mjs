@@ -22,9 +22,33 @@ test('rejects duplicate tags', () => {
 });
 
 test('rejects stale status', () => {
-  const issued = new Date('2026-07-15T19:20:00Z');
   const now = new Date('2026-07-15T19:30:00Z');
-  assert.throws(() => verifyLabBundle(createLabBundle({now: issued}), {now}), /status is not fresh ACTIVE/);
+  const bundle = createLabBundle({now});
+  bundle.status.retrievedAt = '2026-07-15T19:20:00Z';
+  assert.throws(() => verifyLabBundle(bundle, {now}), /status is not fresh ACTIVE/);
+});
+
+test('accepts a long-lived ACTIVE state when the response is fresh', () => {
+  const issued = new Date('2026-07-15T09:30:00Z');
+  const now = new Date('2026-07-15T19:30:00Z');
+  const bundle = createLabBundle({now: issued});
+  bundle.status.retrievedAt = now.toISOString();
+  assert.equal(verifyLabBundle(bundle, {now}).ok, true);
+});
+
+test('rejects an operational key older than ka', () => {
+  const issued = new Date('2026-07-14T18:30:00Z');
+  const now = new Date('2026-07-15T19:30:00Z');
+  const bundle = createLabBundle({now: issued});
+  bundle.status.retrievedAt = now.toISOString();
+  assert.throws(() => verifyLabBundle(bundle, {now}), /operational key exceeds ka limit/);
+});
+
+test('rejects non-ASCII tag data', () => {
+  const now = new Date('2026-07-15T19:30:00Z');
+  const bundle = createLabBundle({now});
+  bundle.record = bundle.record.replace('gi=billing', 'gi=bílling');
+  assert.throws(() => verifyLabBundle(bundle, {now}), /printable ASCII/);
 });
 
 test('rejects a substituted operational key', () => {

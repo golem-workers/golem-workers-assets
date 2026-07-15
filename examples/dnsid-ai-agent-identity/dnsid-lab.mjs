@@ -31,7 +31,7 @@ export function generateEs256Pair() {
 export function canonicalRecord(tags) {
   return Object.entries(tags)
     .filter(([name]) => name !== 'sg')
-    .sort(([left], [right]) => left.localeCompare(right))
+    .sort(([left], [right]) => (left < right ? -1 : left > right ? 1 : 0))
     .map(([name, value]) => `${name}=${value}`)
     .join(';');
 }
@@ -55,7 +55,18 @@ export function serializeRecord(tags) {
 }
 
 export function parseRecord(record) {
-  const pairs = record.split(';').map((part) => part.trim()).filter(Boolean);
+  if (typeof record !== 'string' || !/^[\x20-\x7E]+$/.test(record)) {
+    throw new Error('record must be printable ASCII');
+  }
+  const pairs = record.split(';');
+  if (pairs.at(-1) === '') pairs.pop();
+  if (pairs.some((part) => part === '')) throw new Error('empty tag');
+  for (let index = 1; index < pairs.length; index += 1) {
+    if (pairs[index].startsWith(' ')) pairs[index] = pairs[index].slice(1);
+    if (pairs[index].startsWith(' ') || pairs[index].endsWith(' ')) {
+      throw new Error('invalid tag whitespace');
+    }
+  }
   if (pairs[0] !== 'v=DNSid1') throw new Error('v=DNSid1 must be the first tag');
   const tags = {};
   for (const pair of pairs) {
@@ -64,7 +75,7 @@ export function parseRecord(record) {
     const name = pair.slice(0, separator);
     const value = pair.slice(separator + 1);
     if (Object.hasOwn(tags, name)) throw new Error(`duplicate tag: ${name}`);
-    if (!/^[A-Za-z][A-Za-z0-9_]*$/.test(name) || !value || /[; ]/.test(value)) {
+    if (!/^[A-Za-z][A-Za-z0-9_]*$/.test(name) || !/^[\x21-\x3A\x3C-\x7E]*$/.test(value)) {
       throw new Error(`invalid tag: ${name}`);
     }
     tags[name] = value;
@@ -116,7 +127,11 @@ export function createLabBundle({agentFqdn = 'billing-agent.example', now = new 
     record: serializeRecord(tags),
     entityJwks: {keys: [entity.publicJwk]},
     operationalJwks: {keys: [operational.publicJwk]},
-    status: {state: 'ACTIVE', transitionedAt: now.toISOString()},
+    status: {
+      state: 'ACTIVE',
+      transitionedAt: now.toISOString(),
+      retrievedAt: now.toISOString(),
+    },
     issuance,
   };
 }
@@ -151,7 +166,16 @@ export function verifyLabBundle(bundle, {now = new Date(), statusMaxAgeMs = 300_
       jwkThumbprint(bundle.issuance.payload.operationalJwk) !== jwkThumbprint(operationalKeys[0])) {
     throw new Error('current keys do not match ISSUANCE');
   }
-  const statusAge = now.getTime() - Date.parse(bundle.status?.transitionedAt ?? '');
+  if (tags.ka) {
+    const keyAgeLimits = { '24h': 24 * 60 * 60 * 1000, '7d': 7 * 24 * 60 * 60 * 1000,
+      '30d': 30 * 24 * 60 * 60 * 1000, '90d': 90 * 24 * 60 * 60 * 1000 };
+    const keyAgeLimit = keyAgeLimits[tags.ka];
+    const keyAge = now.getTime() - Date.parse(bundle.issuance.payload.timestamp ?? '');
+    if (!keyAgeLimit || !Number.isFinite(keyAge) || keyAge < 0 || keyAge > keyAgeLimit) {
+      throw new Error('operational key exceeds ka limit');
+    }
+  }
+  const statusAge = now.getTime() - Date.parse(bundle.status?.retrievedAt ?? '');
   if (bundle.status?.state !== 'ACTIVE' || !Number.isFinite(statusAge) || statusAge < 0 || statusAge > statusMaxAgeMs) {
     throw new Error('status is not fresh ACTIVE');
   }
