@@ -1,0 +1,10 @@
+{
+  "name": "dnsid-ai-agent-identity-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "demo": "node dnsid-lab.mjs",
+    "test": "node --test test.mjs"
+  },
+  "engines": {"node": ">=22"}
+}
