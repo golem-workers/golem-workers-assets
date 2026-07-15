@@ -1,0 +1,13 @@
+{
+  "name": "a2a-protocol-1-migration-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "demo": "node migration-lab.mjs",
+    "test": "node --test test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
