@@ -27,8 +27,10 @@
   <path d="M380 362H485" stroke="#77e4d1" stroke-width="8" marker-end="url(#arrow)"/>
   <path d="M790 352C840 330 850 290 895 287" fill="none" stroke="#77e4d1" stroke-width="8" marker-end="url(#arrow)"/>
   <path d="M790 372C840 405 850 500 895 507" fill="none" stroke="#77e4d1" stroke-width="8" marker-end="url(#arrow)"/>
-  <path d="M915 260C850 205 720 215 685 280" fill="none" stroke="#e9bf70" stroke-width="6" stroke-dasharray="14 12" marker-end="url(#arrow)"/>
-  <path d="M915 535C850 610 720 590 680 445" fill="none" stroke="#e9bf70" stroke-width="6" stroke-dasharray="14 12" marker-end="url(#arrow)"/>
+  <path d="M915 275C860 275 840 320 790 320" fill="none" stroke="#e9bf70" stroke-width="6" stroke-dasharray="14 12" marker-end="url(#arrow)"/>
+  <path d="M915 520C860 520 840 405 790 405" fill="none" stroke="#e9bf70" stroke-width="6" stroke-dasharray="14 12" marker-end="url(#arrow)"/>
+  <text x="840" y="248" text-anchor="middle" fill="#f2d99f" font-family="Inter,Arial,sans-serif" font-size="18">resume</text>
+  <text x="845" y="552" text-anchor="middle" fill="#f2d99f" font-family="Inter,Arial,sans-serif" font-size="18">resume</text>
   <path d="M1200 287C1260 300 1265 342 1305 352" fill="none" stroke="#77e4d1" stroke-width="8" marker-end="url(#arrow)"/>
   <path d="M1200 507C1260 485 1265 405 1305 375" fill="none" stroke="#77e4d1" stroke-width="8" marker-end="url(#arrow)"/>
   <rect x="260" y="700" width="1080" height="85" rx="42" fill="#113b45" stroke="#5fcdbd"/>

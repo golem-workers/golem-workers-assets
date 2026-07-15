@@ -16,7 +16,7 @@
   <text x="140" y="310" fill="#ffb86b" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700">v0.3 contract</text>
   <text x="1005" y="310" fill="#75f2de" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700">v1.0 contract</text>
   <g font-family="ui-monospace,monospace" font-size="24">
-    <text x="140" y="385" fill="#d8e6ed">protocolVersion: "0.3"</text>
+    <text x="140" y="385" fill="#d8e6ed">protocolVersion: 0.3</text>
     <text x="140" y="445" fill="#d8e6ed">preferredTransport</text>
     <text x="140" y="505" fill="#d8e6ed">message/send</text>
     <text x="140" y="565" fill="#d8e6ed">role: user</text>
