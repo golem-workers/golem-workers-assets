@@ -27,6 +27,8 @@
   <path d="M380 362H485" stroke="#77e4d1" stroke-width="8" marker-end="url(#arrow)"/>
   <path d="M790 352C840 330 850 290 895 287" fill="none" stroke="#77e4d1" stroke-width="8" marker-end="url(#arrow)"/>
   <path d="M790 372C840 405 850 500 895 507" fill="none" stroke="#77e4d1" stroke-width="8" marker-end="url(#arrow)"/>
+  <path d="M915 260C850 205 720 215 685 280" fill="none" stroke="#e9bf70" stroke-width="6" stroke-dasharray="14 12" marker-end="url(#arrow)"/>
+  <path d="M915 535C850 610 720 590 680 445" fill="none" stroke="#e9bf70" stroke-width="6" stroke-dasharray="14 12" marker-end="url(#arrow)"/>
   <path d="M1200 287C1260 300 1265 342 1305 352" fill="none" stroke="#77e4d1" stroke-width="8" marker-end="url(#arrow)"/>
   <path d="M1200 507C1260 485 1265 405 1305 375" fill="none" stroke="#77e4d1" stroke-width="8" marker-end="url(#arrow)"/>
   <rect x="260" y="700" width="1080" height="85" rx="42" fill="#113b45" stroke="#5fcdbd"/>

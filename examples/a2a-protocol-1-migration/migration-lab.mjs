@@ -41,6 +41,22 @@ export function buildSendMessageRequest({text, contextId, referenceTaskIds = []}
   return {jsonrpc: '2.0', id: randomUUID(), method: 'SendMessage', params: {message}};
 }
 
+export function buildHttpRequest(messageRequest, version = '1.0') {
+  if (!messageRequest?.method) throw new Error('A2A request body is required');
+  return {
+    headers: {'A2A-Version': version, 'Content-Type': 'application/json'},
+    body: messageRequest,
+  };
+}
+
+export function requireSupportedVersion(headerValue, supported = ['1.0']) {
+  if (!headerValue) throw new Error('A2A-Version header is required');
+  if (!supported.includes(headerValue)) {
+    throw new Error(`unsupported A2A-Version: ${headerValue}`);
+  }
+  return headerValue;
+}
+
 export function assertTaskTransition(previousState, nextState) {
   if (!previousState?.startsWith('TASK_STATE_') || !nextState?.startsWith('TASK_STATE_')) {
     throw new Error('A2A v1 task states must use TASK_STATE_* enum values');
@@ -51,9 +67,24 @@ export function assertTaskTransition(previousState, nextState) {
   return true;
 }
 
-export function listVisibleTasks(tasks, principal) {
+export function listVisibleTasks(repository, principal) {
   if (!principal?.subject || !principal?.tenant) throw new Error('authenticated principal is required');
-  return tasks.filter((task) => task.owner === principal.subject && task.tenant === principal.tenant);
+  if (typeof repository?.findByOwnerAndTenant !== 'function') {
+    throw new Error('scoped task repository is required');
+  }
+  return repository.findByOwnerAndTenant({owner: principal.subject, tenant: principal.tenant});
+}
+
+export class InMemoryTaskRepository {
+  constructor(tasks) {
+    this.tasks = [...tasks];
+    this.lastQuery = null;
+  }
+
+  findByOwnerAndTenant(query) {
+    this.lastQuery = {...query};
+    return this.tasks.filter((task) => task.owner === query.owner && task.tenant === query.tenant);
+  }
 }
 
 export const agentCard = {
@@ -79,10 +110,13 @@ export const agentCard = {
 if (import.meta.url === `file://${process.argv[1]}`) {
   const validation = validateV1AgentCard(agentCard);
   const request = buildSendMessageRequest({text: 'Review invoice INV-1042'});
-  const visible = listVisibleTasks([
+  const transport = buildHttpRequest(request);
+  requireSupportedVersion(transport.headers['A2A-Version']);
+  const repository = new InMemoryTaskRepository([
     {id: 'task-a', owner: 'client-17', tenant: 'acme'},
     {id: 'task-b', owner: 'client-18', tenant: 'acme'},
     {id: 'task-c', owner: 'client-17', tenant: 'globex'},
-  ], {subject: 'client-17', tenant: 'acme'});
-  console.log(JSON.stringify({validation, request, visible}, null, 2));
+  ]);
+  const visible = listVisibleTasks(repository, {subject: 'client-17', tenant: 'acme'});
+  console.log(JSON.stringify({validation, transport, repositoryQuery: repository.lastQuery, visible}, null, 2));
 }

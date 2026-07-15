@@ -16,17 +16,17 @@
   <text x="140" y="310" fill="#ffb86b" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700">v0.3 contract</text>
   <text x="1005" y="310" fill="#75f2de" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700">v1.0 contract</text>
   <g font-family="ui-monospace,monospace" font-size="24">
-    <text x="140" y="385" fill="#d8e6ed">protocolVersion: "0.3.0"</text>
+    <text x="140" y="385" fill="#d8e6ed">protocolVersion: "0.3"</text>
     <text x="140" y="445" fill="#d8e6ed">preferredTransport</text>
     <text x="140" y="505" fill="#d8e6ed">message/send</text>
-    <text x="140" y="565" fill="#d8e6ed">role: "user"</text>
-    <text x="140" y="625" fill="#d8e6ed">kind: "text"</text>
-    <text x="140" y="685" fill="#d8e6ed">state: "completed"</text>
+    <text x="140" y="565" fill="#d8e6ed">role: user</text>
+    <text x="140" y="625" fill="#d8e6ed">kind discriminator</text>
+    <text x="140" y="685" fill="#d8e6ed">state: completed</text>
     <text x="1005" y="385" fill="#f2fbff">supportedInterfaces[]</text>
     <text x="1005" y="445" fill="#f2fbff">protocolVersion per interface</text>
     <text x="1005" y="505" fill="#f2fbff">SendMessage</text>
-    <text x="1005" y="565" fill="#f2fbff">role: "ROLE_USER"</text>
-    <text x="1005" y="625" fill="#f2fbff">member-based parts</text>
+    <text x="1005" y="565" fill="#f2fbff">ROLE_USER enum</text>
+    <text x="1005" y="625" fill="#f2fbff">text member, no kind</text>
     <text x="1005" y="685" fill="#f2fbff">TASK_STATE_COMPLETED</text>
   </g>
   <path d="M690 465H900" stroke="#69e6d6" stroke-width="9" stroke-linecap="round" marker-end="url(#arrow)"/>

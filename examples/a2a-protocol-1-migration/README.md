@@ -6,8 +6,9 @@ It checks four migration boundaries:
 
 - v1 Agent Cards use `supportedInterfaces` with interface-scoped protocol versions;
 - v1 JSON-RPC uses `SendMessage`, `ROLE_USER`, and member-based parts without `kind`;
+- every request carries an accepted `A2A-Version` header;
 - terminal tasks never restart;
-- task listing is scoped to the authenticated subject and tenant.
+- the repository query is constrained by authenticated subject and tenant before records are returned.
 
 Run:
 

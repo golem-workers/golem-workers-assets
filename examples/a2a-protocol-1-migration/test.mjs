@@ -1,10 +1,13 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
+  InMemoryTaskRepository,
   agentCard,
   assertTaskTransition,
+  buildHttpRequest,
   buildSendMessageRequest,
   listVisibleTasks,
+  requireSupportedVersion,
   validateV1AgentCard,
 } from './migration-lab.mjs';
 
@@ -26,6 +29,18 @@ test('builds a v1 SendMessage request', () => {
   assert.equal(request.params.message.role, 'ROLE_USER');
   assert.deepEqual(request.params.message.parts, [{text: 'Review invoice'}]);
   assert.equal('kind' in request.params.message.parts[0], false);
+});
+
+test('sends and accepts the required A2A-Version header', () => {
+  const body = buildSendMessageRequest({text: 'Review invoice'});
+  const request = buildHttpRequest(body);
+  assert.equal(request.headers['A2A-Version'], '1.0');
+  assert.equal(requireSupportedVersion(request.headers['A2A-Version']), '1.0');
+});
+
+test('rejects missing or unsupported A2A-Version headers', () => {
+  assert.throws(() => requireSupportedVersion(null), /required/);
+  assert.throws(() => requireSupportedVersion('0.3'), /unsupported/);
 });
 
 test('preserves context and task references for refinements', () => {
@@ -50,17 +65,18 @@ test('forbids transitions out of terminal task states', () => {
 });
 
 test('scopes task listing to both subject and tenant', () => {
-  const tasks = [
+  const repository = new InMemoryTaskRepository([
     {id: 'mine', owner: 'client-17', tenant: 'acme'},
     {id: 'other-user', owner: 'client-18', tenant: 'acme'},
     {id: 'other-tenant', owner: 'client-17', tenant: 'globex'},
-  ];
+  ]);
   assert.deepEqual(
-    listVisibleTasks(tasks, {subject: 'client-17', tenant: 'acme'}).map(({id}) => id),
+    listVisibleTasks(repository, {subject: 'client-17', tenant: 'acme'}).map(({id}) => id),
     ['mine'],
   );
+  assert.deepEqual(repository.lastQuery, {owner: 'client-17', tenant: 'acme'});
 });
 
 test('requires an authenticated principal before listing tasks', () => {
-  assert.throws(() => listVisibleTasks([], null), /authenticated principal/);
+  assert.throws(() => listVisibleTasks(new InMemoryTaskRepository([]), null), /authenticated principal/);
 });
