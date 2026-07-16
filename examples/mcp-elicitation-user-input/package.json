@@ -1,0 +1,9 @@
+{
+  "name": "mcp-elicitation-user-input-fixture",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node demo.mjs"
+  }
+}

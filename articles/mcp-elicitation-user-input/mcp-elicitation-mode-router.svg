@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#08111f"/>
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#18c7bd"/><stop offset="1" stop-color="#6c7cff"/></linearGradient></defs>
+  <text x="100" y="105" fill="#f5f7ff" font-family="Arial" font-size="48" font-weight="700">MCP elicitation mode router</text>
+  <text x="100" y="155" fill="#9fb0c8" font-family="Arial" font-size="25">Route by data sensitivity, not by interface convenience</text>
+  <rect x="110" y="295" width="360" height="220" rx="28" fill="#111f33" stroke="#4a607d" stroke-width="3"/>
+  <text x="290" y="370" text-anchor="middle" fill="#f5f7ff" font-family="Arial" font-size="34" font-weight="700">Server needs input</text>
+  <text x="290" y="420" text-anchor="middle" fill="#aab8cc" font-family="Arial" font-size="25">What kind of data?</text>
+  <path d="M470 405H650" stroke="url(#g)" stroke-width="10"/>
+  <path d="M630 385l30 20-30 20" fill="none" stroke="#6c7cff" stroke-width="10"/>
+  <polygon points="780,255 950,405 780,555 610,405" fill="#152a42" stroke="#18c7bd" stroke-width="4"/>
+  <text x="780" y="392" text-anchor="middle" fill="#f5f7ff" font-family="Arial" font-size="30" font-weight="700">Secret or</text>
+  <text x="780" y="430" text-anchor="middle" fill="#f5f7ff" font-family="Arial" font-size="30" font-weight="700">transaction?</text>
+  <path d="M950 330H1110" stroke="#ffb84d" stroke-width="9"/>
+  <text x="1025" y="305" text-anchor="middle" fill="#ffcf7b" font-family="Arial" font-size="25" font-weight="700">YES</text>
+  <rect x="1110" y="215" width="380" height="230" rx="28" fill="#2a2016" stroke="#ffb84d" stroke-width="4"/>
+  <text x="1300" y="290" text-anchor="middle" fill="#fff4de" font-family="Arial" font-size="38" font-weight="700">URL mode</text>
+  <text x="1300" y="345" text-anchor="middle" fill="#f2c77f" font-family="Arial" font-size="24">Out-of-band page</text>
+  <text x="1300" y="382" text-anchor="middle" fill="#f2c77f" font-family="Arial" font-size="24">Client never sees secret</text>
+  <path d="M950 485H1110" stroke="#18c7bd" stroke-width="9"/>
+  <text x="1025" y="535" text-anchor="middle" fill="#6fe0d9" font-family="Arial" font-size="25" font-weight="700">NO</text>
+  <rect x="1110" y="470" width="380" height="230" rx="28" fill="#102a2b" stroke="#18c7bd" stroke-width="4"/>
+  <text x="1300" y="545" text-anchor="middle" fill="#eafffd" font-family="Arial" font-size="38" font-weight="700">Form mode</text>
+  <text x="1300" y="600" text-anchor="middle" fill="#8de5df" font-family="Arial" font-size="24">Flat primitive schema</text>
+  <text x="1300" y="637" text-anchor="middle" fill="#8de5df" font-family="Arial" font-size="24">Review before submit</text>
+  <rect x="110" y="730" width="1380" height="90" rx="20" fill="#101c2d" stroke="#31445e" stroke-width="2"/>
+  <text x="800" y="788" text-anchor="middle" fill="#c7d3e5" font-family="Arial" font-size="27">Passwords, API keys, access tokens, payment credentials &#8594; URL mode only</text>
+</svg>

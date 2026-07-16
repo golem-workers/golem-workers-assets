@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#08111f"/>
+  <text x="90" y="100" fill="#f4f7ff" font-family="Arial" font-size="48" font-weight="700">URL elicitation lifecycle</text>
+  <text x="90" y="148" fill="#9eb0c9" font-family="Arial" font-size="25">Consent, out-of-band completion, notification, and safe retry</text>
+  <g font-family="Arial">
+    <g><circle cx="160" cy="330" r="58" fill="#17263b" stroke="#6c7cff" stroke-width="4"/><text x="160" y="342" text-anchor="middle" fill="#fff" font-size="32" font-weight="700">1</text><text x="160" y="430" text-anchor="middle" fill="#d7e0ee" font-size="25">Tool blocked</text><text x="160" y="465" text-anchor="middle" fill="#8fa2bd" font-size="21">needs connection</text></g>
+    <g><circle cx="480" cy="330" r="58" fill="#17263b" stroke="#18c7bd" stroke-width="4"/><text x="480" y="342" text-anchor="middle" fill="#fff" font-size="32" font-weight="700">2</text><text x="480" y="430" text-anchor="middle" fill="#d7e0ee" font-size="25">Client shows host</text><text x="480" y="465" text-anchor="middle" fill="#8fa2bd" font-size="21">user accepts navigation</text></g>
+    <g><circle cx="800" cy="330" r="58" fill="#2b2116" stroke="#ffb84d" stroke-width="4"/><text x="800" y="342" text-anchor="middle" fill="#fff" font-size="32" font-weight="700">3</text><text x="800" y="430" text-anchor="middle" fill="#ffe7bd" font-size="25">External page</text><text x="800" y="465" text-anchor="middle" fill="#d8b77f" font-size="21">secret stays out of MCP</text></g>
+    <g><circle cx="1120" cy="330" r="58" fill="#17263b" stroke="#18c7bd" stroke-width="4"/><text x="1120" y="342" text-anchor="middle" fill="#fff" font-size="32" font-weight="700">4</text><text x="1120" y="430" text-anchor="middle" fill="#d7e0ee" font-size="25">Completion signal</text><text x="1120" y="465" text-anchor="middle" fill="#8fa2bd" font-size="21">same elicitationId</text></g>
+    <g><circle cx="1440" cy="330" r="58" fill="#153225" stroke="#50d391" stroke-width="4"/><text x="1440" y="342" text-anchor="middle" fill="#fff" font-size="32" font-weight="700">5</text><text x="1440" y="430" text-anchor="middle" fill="#ddffeb" font-size="25">Retry original tool</text><text x="1440" y="465" text-anchor="middle" fill="#99d9b5" font-size="21">idempotently</text></g>
+  </g>
+  <g stroke="#526985" stroke-width="8" fill="none"><path d="M218 330H422"/><path d="M538 330H742"/><path d="M858 330H1062"/><path d="M1178 330H1382"/></g>
+  <g fill="#6c7cff"><path d="M405 312l26 18-26 18"/><path d="M725 312l26 18-26 18"/><path d="M1045 312l26 18-26 18"/><path d="M1365 312l26 18-26 18"/></g>
+  <rect x="110" y="585" width="1380" height="180" rx="28" fill="#101d2e" stroke="#354a66" stroke-width="3"/>
+  <text x="150" y="645" fill="#ffcc76" font-family="Arial" font-size="28" font-weight="700">Correctness rule</text>
+  <text x="150" y="695" fill="#d7e0ee" font-family="Arial" font-size="26">The initial accept response means only: "the user agreed to open the URL."</text>
+  <text x="150" y="737" fill="#a8b7cc" font-family="Arial" font-size="24">Completion is separate; notifications may be lost, so keep a manual retry/cancel path.</text>
+</svg>

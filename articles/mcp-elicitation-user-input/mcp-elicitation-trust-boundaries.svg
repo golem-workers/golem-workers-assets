@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#08111f"/>
+  <text x="90" y="100" fill="#f4f7ff" font-family="Arial" font-size="48" font-weight="700">Elicitation trust boundaries</text>
+  <text x="90" y="150" fill="#9fb1c9" font-family="Arial" font-size="25">Keep identity, consent, secrets, and retry state in the correct owner</text>
+  <rect x="90" y="225" width="410" height="500" rx="32" fill="#111e30" stroke="#6c7cff" stroke-width="4"/>
+  <text x="295" y="295" text-anchor="middle" fill="#e8ecff" font-family="Arial" font-size="36" font-weight="700">MCP client</text>
+  <text x="135" y="365" fill="#ccd5e5" font-family="Arial" font-size="25">&#8226; Shows requesting server</text>
+  <text x="135" y="415" fill="#ccd5e5" font-family="Arial" font-size="25">&#8226; Displays destination host</text>
+  <text x="135" y="465" fill="#ccd5e5" font-family="Arial" font-size="25">&#8226; Offers decline + cancel</text>
+  <text x="135" y="515" fill="#ccd5e5" font-family="Arial" font-size="25">&#8226; Validates form locally</text>
+  <text x="135" y="590" fill="#ffce79" font-family="Arial" font-size="24">Never receives URL-mode</text>
+  <text x="135" y="625" fill="#ffce79" font-family="Arial" font-size="24">credentials or payment data</text>
+  <rect x="595" y="225" width="410" height="500" rx="32" fill="#10272a" stroke="#18c7bd" stroke-width="4"/>
+  <text x="800" y="295" text-anchor="middle" fill="#e6fffd" font-family="Arial" font-size="36" font-weight="700">MCP server</text>
+  <text x="640" y="365" fill="#c9e9e6" font-family="Arial" font-size="25">&#8226; Chooses negotiated mode</text>
+  <text x="640" y="415" fill="#c9e9e6" font-family="Arial" font-size="25">&#8226; Issues opaque correlation ID</text>
+  <text x="640" y="465" fill="#c9e9e6" font-family="Arial" font-size="25">&#8226; Stores retry state</text>
+  <text x="640" y="515" fill="#c9e9e6" font-family="Arial" font-size="25">&#8226; Scopes completion to client</text>
+  <text x="640" y="590" fill="#7fe2db" font-family="Arial" font-size="24">Does not confuse elicitation</text>
+  <text x="640" y="625" fill="#7fe2db" font-family="Arial" font-size="24">with MCP server OAuth</text>
+  <rect x="1100" y="225" width="410" height="500" rx="32" fill="#2a2016" stroke="#ffb84d" stroke-width="4"/>
+  <text x="1305" y="295" text-anchor="middle" fill="#fff2db" font-family="Arial" font-size="36" font-weight="700">External service</text>
+  <text x="1145" y="365" fill="#f0d7ae" font-family="Arial" font-size="25">&#8226; Collects the secret</text>
+  <text x="1145" y="415" fill="#f0d7ae" font-family="Arial" font-size="25">&#8226; Performs OAuth/payment</text>
+  <text x="1145" y="465" fill="#f0d7ae" font-family="Arial" font-size="25">&#8226; Verifies callback state</text>
+  <text x="1145" y="515" fill="#f0d7ae" font-family="Arial" font-size="25">&#8226; Signals server completion</text>
+  <text x="1145" y="590" fill="#ffcc7a" font-family="Arial" font-size="24">HTTPS, short-lived state,</text>
+  <text x="1145" y="625" fill="#ffcc7a" font-family="Arial" font-size="24">no secrets in redirect URLs</text>
+  <path d="M500 475H595" stroke="#6c7cff" stroke-width="9"/><path d="M570 455l30 20-30 20" fill="#6c7cff"/>
+  <path d="M1005 475H1100" stroke="#ffb84d" stroke-width="9"/><path d="M1075 455l30 20-30 20" fill="#ffb84d"/>
+  <text x="800" y="820" text-anchor="middle" fill="#a7b6cb" font-family="Arial" font-size="26">Authorization to the MCP server remains a separate transport-level flow.</text>
+</svg>
