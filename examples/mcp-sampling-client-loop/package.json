@@ -1,0 +1,9 @@
+{
+  "name": "mcp-sampling-client-loop-fixture",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node demo.mjs"
+  }
+}
