@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "slug": "no-coding-ai-agent",
+  "normalizedAt": "2026-07-21T14:03:00Z",
+  "purpose": "Humanity remediation batch 31",
+  "style": "cinematic editorial operations photography with restrained cyan workflow accents",
+  "assets": [
+    {
+      "file": "no-coding-ai-agent-cover.webp",
+      "role": "cover",
+      "dimensions": [1280, 720],
+      "description": "An operator sorting a bounded inbox workflow at a physical desk."
+    },
+    {
+      "file": "no-coding-ai-agent-workflow.webp",
+      "role": "body",
+      "dimensions": [960, 540],
+      "description": "A finite intake, classification, and review sequence with a human operator."
+    },
+    {
+      "file": "no-coding-ai-agent-shadow-mode.webp",
+      "role": "body",
+      "dimensions": [960, 540],
+      "description": "A human reviewer compares existing work with a shadow agent proposal."
+    }
+  ],
+  "unusedLegacyAsset": "no-coding-ai-agent-components.webp",
+  "notes": "Existing original artwork was visually inspected and center-cropped to the current 16:9 publication contract. No logos, readable text, proprietary UI, or watermarks are present."
+}
