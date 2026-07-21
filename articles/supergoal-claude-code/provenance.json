@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "slug": "supergoal-claude-code",
+  "generatedAt": "2026-07-21T19:17:00Z",
+  "purpose": "Humanity remediation batch 43",
+  "model": "openai/gpt-image-2",
+  "style": "tactile monochrome ink-and-cut-paper editorial collage on archival stock with charcoal linework, halftone grain, and restrained vermilion accents",
+  "assets": [
+    {
+      "file": "supergoal-deleted-deliverable-cover-1280x720.webp",
+      "role": "cover",
+      "dimensions": [1280, 720],
+      "sha256": "a29ac0f1ca4232f7057c474523b63342dd3bfe5489fbd02c1c73b068b39dcf1d",
+      "source": "/root/.openclaw/media/tool-image-generation/supergoal-audit-deleted-deliverable---c917aed8-2765-419c-b52f-229b85e8ef3f.webp",
+      "crop": "1024x576+700+0, resized to 1280x720",
+      "description": "A missing paper deliverable falls through an audit ledger while an approval stamp still lands beside its outline."
+    },
+    {
+      "file": "supergoal-thin-phase-spec-960x540.webp",
+      "role": "body",
+      "dimensions": [960, 540],
+      "sha256": "bd9f399bd523307ad1bc6a3e8005a57357c856ce2fbe743824a290ccf47c2f79",
+      "source": "/root/.openclaw/media/tool-image-generation/supergoal-audit-deleted-deliverable---c917aed8-2765-419c-b52f-229b85e8ef3f.webp",
+      "crop": "1024x576+0+576, resized to 960x540",
+      "description": "An empty multi-section phase folder passes an open mechanical validation gate."
+    },
+    {
+      "file": "supergoal-working-tree-audit-960x540.webp",
+      "role": "body",
+      "dimensions": [960, 540],
+      "sha256": "6473a1ab4fd7371f543f81c099374a015b8c3804e96a8c1248a7c87bce794ee0",
+      "source": "/root/.openclaw/media/tool-image-generation/supergoal-audit-deleted-deliverable---c917aed8-2765-419c-b52f-229b85e8ef3f.webp",
+      "crop": "1024x576+1024+576, resized to 960x540",
+      "description": "Five paper paths representing working-tree states converge on an audit table while deletion remains a negative-space slot."
+    }
+  ],
+  "notes": "Original raster artwork was generated as a coherent editorial contact sheet, visually inspected, cropped into three single-focal 16:9 compositions, resized, stripped, and WebP-compressed. No readable text, logos, fake UI, proprietary trade dress, or watermarks are present."
+}
