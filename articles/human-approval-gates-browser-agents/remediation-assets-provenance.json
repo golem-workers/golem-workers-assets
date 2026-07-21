@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "slug": "human-approval-gates-browser-agents",
+  "createdAt": "2026-07-21T16:26:00Z",
+  "purpose": "Humanity remediation batch 37",
+  "assets": [
+    {
+      "file": "human-approval-gates-browser-agents-cover-1280x720.webp",
+      "source": "human-approval-gates-browser-agents-hero.webp",
+      "role": "dedicated-cover",
+      "transformation": "center crop and resize to 1280x720, WebP quality 82"
+    },
+    {
+      "file": "browser-agent-approval-pipeline-960x540.webp",
+      "source": "browser-agent-approval-pipeline-v2.webp",
+      "role": "body-illustration",
+      "transformation": "center crop and resize to 960x540, WebP quality 82"
+    },
+    {
+      "file": "browser-agent-approval-negative-tests-960x540.webp",
+      "source": "browser-agent-approval-negative-tests-v2.webp",
+      "role": "body-illustration",
+      "transformation": "center crop and resize to 960x540, WebP quality 82"
+    }
+  ],
+  "provenance": "Normalized from original GolemWorkers-owned raster illustrations already stored in this repository."
+}
