@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "slug": "ai-code-review-security-image-prompt-injection",
+  "createdAt": "2026-07-21T17:43:00Z",
+  "purpose": "Humanity remediation batch 40",
+  "generation": {
+    "tool": "built-in image_gen",
+    "style": "mixed-media editorial collage",
+    "sharedConstraints": "No readable text, numbers, logos, company names, fake UI, watermarks, proprietary trade dress, or real credential values."
+  },
+  "assets": [
+    {
+      "file": "ai-code-review-image-injection-cover-1280x720.webp",
+      "source": "built-in image_gen output exec-d696f231-686d-4735-8463-ae315866bc2f.png",
+      "role": "dedicated-cover",
+      "transformation": "center crop and resize to 1280x720, WebP quality 82"
+    },
+    {
+      "file": "ai-code-review-observation-instruction-split-960x540.webp",
+      "source": "built-in image_gen output exec-b4a95ec2-2244-4a35-80a2-c34b1365962c.png",
+      "role": "body-illustration",
+      "transformation": "center crop and resize to 960x540, WebP quality 82"
+    },
+    {
+      "file": "ai-code-review-three-lane-test-960x540.webp",
+      "source": "built-in image_gen output exec-d12359e0-271e-4dd2-afff-102c8c666157.png",
+      "role": "body-illustration",
+      "transformation": "center crop and resize to 960x540, WebP quality 82"
+    }
+  ]
+}
