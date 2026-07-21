@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "slug": "mcp-tasks-long-running-tools",
+  "generatedAt": "2026-07-21T18:50:00Z",
+  "purpose": "Humanity remediation batch 42",
+  "model": "openai/gpt-image-2",
+  "style": "cinematic near-photoreal industrial observatory with tactile electromechanical memory, graphite, steel, frosted glass, cyan status light, and amber hazard light",
+  "assets": [
+    {
+      "file": "mcp-tasks-finished-twice-cover-1280x720.webp",
+      "role": "cover",
+      "dimensions": [1280, 720],
+      "source": "/root/.openclaw/media/tool-image-generation/mcp-tasks-durability---ad1f6150-0ca4-418b-814a-9491bd57a051.webp",
+      "description": "Two completion signals converge on one durable result mechanism after a task capsule crosses a checkpoint."
+    },
+    {
+      "file": "mcp-task-restart-checkpoint-960x540.webp",
+      "role": "body",
+      "dimensions": [960, 540],
+      "source": "/root/.openclaw/media/tool-image-generation/mcp-tasks-durability---735a4b52-d74e-434d-8d2a-65fc1f1768ef.webp",
+      "description": "A durable task engine survives while a volatile duplicate path dissolves after restart."
+    },
+    {
+      "file": "mcp-task-terminal-race-960x540.webp",
+      "role": "body",
+      "dimensions": [960, 540],
+      "source": "/root/.openclaw/media/tool-image-generation/mcp-tasks-durability---ad1f6150-0ca4-418b-814a-9491bd57a051.webp",
+      "description": "Two opposing terminal transitions meet one one-way latch, allowing only one winner."
+    }
+  ],
+  "notes": "Original generated raster panels were visually inspected, cropped to individual single-focal 16:9 compositions, resized, and WebP-compressed. No logos, readable text, proprietary UI, or watermarks are present. Legacy SVG and WebP assets remain in the directory but are not used by the remediated article."
+}
