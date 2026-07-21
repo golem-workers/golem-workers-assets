@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "slug": "nvidia-tao-agent-skills-cosmos-3-post-training",
+  "createdAt": "2026-07-21T19:43:00Z",
+  "generator": "openai/gpt-image-2",
+  "visualProfile": "bloomberg-data-poster",
+  "assets": [
+    {
+      "file": "tao-one-day-compute-cover-1280x720.webp",
+      "role": "cover",
+      "dimensions": [1280, 720],
+      "bytes": 85370,
+      "sha256": "8bf2f300db848aad21f29ff80f802c7e11cc6f6d686361178f16043c13783757",
+      "source": "/root/.openclaw/agents/main/agent/codex-home/generated_images/019f8263-1796-7583-a1eb-eb2bedb2afbe/exec-0c2a5d86-5ba5-45ce-8fb3-fb38f81adeb2.png"
+    },
+    {
+      "file": "tao-wall-clock-capacity-960x540.webp",
+      "role": "body",
+      "dimensions": [960, 540],
+      "bytes": 37212,
+      "sha256": "2d7f5f3095dbc08297d2210229ef1318aed3b6614b9d98cdabd454f2095a3654",
+      "source": "/root/.openclaw/agents/main/agent/codex-home/generated_images/019f8263-1796-7583-a1eb-eb2bedb2afbe/exec-29e4f69c-3d13-4bfa-9871-6b8e8013e378.png"
+    },
+    {
+      "file": "tao-launch-review-packet-960x540.webp",
+      "role": "body",
+      "dimensions": [960, 540],
+      "bytes": 33734,
+      "sha256": "bf617812f7be5c769b183e23fb3a19ef4d883fe62c9819d8f012bce641d6eec2",
+      "source": "/root/.openclaw/agents/main/agent/codex-home/generated_images/019f8263-1796-7583-a1eb-eb2bedb2afbe/exec-7b9a5e31-4c53-41d4-8396-9340dedefa3f.png"
+    }
+  ],
+  "constraints": {
+    "originalRaster": true,
+    "noReadableText": true,
+    "noLogos": true,
+    "noWatermarks": true,
+    "commitPinnedPublicationRequired": true
+  }
+}
