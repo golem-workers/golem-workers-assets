@@ -1,0 +1,217 @@
+[
+  {
+    "case": "new-approved",
+    "event": {
+      "organization": "demo-org",
+      "source": "mailbox-A",
+      "eventId": "demo-0042",
+      "payload": {
+        "subject": "20 chairs, Almaty",
+        "quantity": 20,
+        "unit": "pieces",
+        "replyLanguage": "kk",
+        "contact": "buyer@example.invalid",
+        "company": null,
+        "budget": null,
+        "currencyPolicy": "KZT",
+        "assignee": "demo-user-17",
+        "sourceText": "Сәлеметсіз бе! Алматыдағы кеңсеге 20 орындық керек. Баға ұсынысын қазақша жіберіңіз. Бюджет әлі бекітілмеген."
+      },
+      "candidateIds": [],
+      "approvedExactPayload": true
+    },
+    "receipt": {},
+    "expected": "CREATE_LEAD"
+  },
+  {
+    "case": "completed-replay",
+    "event": {
+      "organization": "demo-org",
+      "source": "mailbox-A",
+      "eventId": "demo-0042",
+      "payload": {
+        "subject": "20 chairs, Almaty",
+        "quantity": 20,
+        "unit": "pieces",
+        "replyLanguage": "kk",
+        "contact": "buyer@example.invalid",
+        "company": null,
+        "budget": null,
+        "currencyPolicy": "KZT",
+        "assignee": "demo-user-17",
+        "sourceText": "Сәлеметсіз бе! Алматыдағы кеңсеге 20 орындық керек. Баға ұсынысын қазақша жіберіңіз. Бюджет әлі бекітілмеген."
+      },
+      "candidateIds": [],
+      "approvedExactPayload": true
+    },
+    "receipt": {
+      "payloadHash": "130ae3de7e6fde32e0b462c8a3e8c4dece4b12904cc5e4d5122e7e76e8f9470b",
+      "leadId": "demo-lead-1",
+      "leadState": "confirmed",
+      "taskId": "demo-task-1",
+      "taskState": "confirmed"
+    },
+    "expected": "RETURN_RECEIPT"
+  },
+  {
+    "case": "changed-payload-same-key",
+    "event": {
+      "organization": "demo-org",
+      "source": "mailbox-A",
+      "eventId": "demo-0042",
+      "payload": {
+        "subject": "20 chairs, Almaty",
+        "quantity": 20,
+        "unit": "pieces",
+        "replyLanguage": "kk",
+        "contact": "buyer@example.invalid",
+        "company": null,
+        "budget": null,
+        "currencyPolicy": "KZT",
+        "assignee": "demo-user-17",
+        "sourceText": "Сәлеметсіз бе! Алматыдағы кеңсеге 20 орындық керек. Баға ұсынысын қазақша жіберіңіз. Бюджет әлі бекітілмеген."
+      },
+      "candidateIds": [],
+      "approvedExactPayload": true
+    },
+    "receipt": {
+      "payloadHash": "old-hash"
+    },
+    "expected": "HOLD_CONFLICT"
+  },
+  {
+    "case": "missing-contact",
+    "event": {
+      "organization": "demo-org",
+      "source": "mailbox-A",
+      "eventId": "demo-0042",
+      "payload": {
+        "subject": "20 chairs, Almaty",
+        "quantity": 20,
+        "unit": "pieces",
+        "replyLanguage": "kk",
+        "contact": null,
+        "company": null,
+        "budget": null,
+        "currencyPolicy": "KZT",
+        "assignee": "demo-user-17",
+        "sourceText": "Сәлеметсіз бе! Алматыдағы кеңсеге 20 орындық керек. Баға ұсынысын қазақша жіберіңіз. Бюджет әлі бекітілмеген."
+      },
+      "candidateIds": [],
+      "approvedExactPayload": true
+    },
+    "receipt": {},
+    "expected": "ASK_CONTACT"
+  },
+  {
+    "case": "multiple-candidates",
+    "event": {
+      "organization": "demo-org",
+      "source": "mailbox-A",
+      "eventId": "demo-0042",
+      "payload": {
+        "subject": "20 chairs, Almaty",
+        "quantity": 20,
+        "unit": "pieces",
+        "replyLanguage": "kk",
+        "contact": "buyer@example.invalid",
+        "company": null,
+        "budget": null,
+        "currencyPolicy": "KZT",
+        "assignee": "demo-user-17",
+        "sourceText": "Сәлеметсіз бе! Алматыдағы кеңсеге 20 орындық керек. Баға ұсынысын қазақша жіберіңіз. Бюджет әлі бекітілмеген."
+      },
+      "candidateIds": [
+        "demo-contact-1",
+        "demo-contact-2"
+      ],
+      "approvedExactPayload": true
+    },
+    "receipt": {},
+    "expected": "REVIEW_MATCHES"
+  },
+  {
+    "case": "unknown-lead-result",
+    "event": {
+      "organization": "demo-org",
+      "source": "mailbox-A",
+      "eventId": "demo-0042",
+      "payload": {
+        "subject": "20 chairs, Almaty",
+        "quantity": 20,
+        "unit": "pieces",
+        "replyLanguage": "kk",
+        "contact": "buyer@example.invalid",
+        "company": null,
+        "budget": null,
+        "currencyPolicy": "KZT",
+        "assignee": "demo-user-17",
+        "sourceText": "Сәлеметсіз бе! Алматыдағы кеңсеге 20 орындық керек. Баға ұсынысын қазақша жіберіңіз. Бюджет әлі бекітілмеген."
+      },
+      "candidateIds": [],
+      "approvedExactPayload": true
+    },
+    "receipt": {
+      "payloadHash": "130ae3de7e6fde32e0b462c8a3e8c4dece4b12904cc5e4d5122e7e76e8f9470b",
+      "leadState": "unknown"
+    },
+    "expected": "RECONCILE_LEAD"
+  },
+  {
+    "case": "lead-confirmed-task-not-started",
+    "event": {
+      "organization": "demo-org",
+      "source": "mailbox-A",
+      "eventId": "demo-0042",
+      "payload": {
+        "subject": "20 chairs, Almaty",
+        "quantity": 20,
+        "unit": "pieces",
+        "replyLanguage": "kk",
+        "contact": "buyer@example.invalid",
+        "company": null,
+        "budget": null,
+        "currencyPolicy": "KZT",
+        "assignee": "demo-user-17",
+        "sourceText": "Сәлеметсіз бе! Алматыдағы кеңсеге 20 орындық керек. Баға ұсынысын қазақша жіберіңіз. Бюджет әлі бекітілмеген."
+      },
+      "candidateIds": [],
+      "approvedExactPayload": true
+    },
+    "receipt": {
+      "payloadHash": "130ae3de7e6fde32e0b462c8a3e8c4dece4b12904cc5e4d5122e7e76e8f9470b",
+      "leadId": "demo-lead-1",
+      "leadState": "confirmed"
+    },
+    "expected": "CREATE_TASK"
+  },
+  {
+    "case": "unknown-task-result",
+    "event": {
+      "organization": "demo-org",
+      "source": "mailbox-A",
+      "eventId": "demo-0042",
+      "payload": {
+        "subject": "20 chairs, Almaty",
+        "quantity": 20,
+        "unit": "pieces",
+        "replyLanguage": "kk",
+        "contact": "buyer@example.invalid",
+        "company": null,
+        "budget": null,
+        "currencyPolicy": "KZT",
+        "assignee": "demo-user-17",
+        "sourceText": "Сәлеметсіз бе! Алматыдағы кеңсеге 20 орындық керек. Баға ұсынысын қазақша жіберіңіз. Бюджет әлі бекітілмеген."
+      },
+      "candidateIds": [],
+      "approvedExactPayload": true
+    },
+    "receipt": {
+      "payloadHash": "130ae3de7e6fde32e0b462c8a3e8c4dece4b12904cc5e4d5122e7e76e8f9470b",
+      "leadId": "demo-lead-1",
+      "leadState": "confirmed",
+      "taskState": "unknown"
+    },
+    "expected": "RECONCILE_TASK"
+  }
+]

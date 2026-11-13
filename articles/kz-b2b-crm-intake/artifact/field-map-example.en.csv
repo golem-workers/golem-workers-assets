@@ -1,0 +1,9 @@
+Field,Value and source,Validation,If unknown
+source_event,Envelope: mailbox-A + demo-0042,Stable key; not model output,HOLD_SOURCE
+quantity,20 орындық → 20 pieces,Check the unit and original passage,Clarify
+reply_language,қазақша жіберіңіз → kk,Do not change the original when translating,Review manually
+contact,buyer@example.invalid (synthetic),Check against the envelope; not proof of identity,ASK_CONTACT
+company,Unknown,Do not invent a name,Clarify
+budget,Unapproved; unknown,Do not substitute zero or a price-list amount,Clarify
+currency,KZT from the example rule,Do not present it as the customer’s words,Check the rule
+assignee,demo-user-17 from the queue,Verify the actual ID and permissions separately,WAIT_APPROVAL

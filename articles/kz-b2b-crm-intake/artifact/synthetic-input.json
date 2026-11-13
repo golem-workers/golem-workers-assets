@@ -1,0 +1,19 @@
+{
+  "organization": "demo-org",
+  "source": "mailbox-A",
+  "eventId": "demo-0042",
+  "payload": {
+    "subject": "20 chairs, Almaty",
+    "quantity": 20,
+    "unit": "pieces",
+    "replyLanguage": "kk",
+    "contact": "buyer@example.invalid",
+    "company": null,
+    "budget": null,
+    "currencyPolicy": "KZT",
+    "assignee": "demo-user-17",
+    "sourceText": "Сәлеметсіз бе! Алматыдағы кеңсеге 20 орындық керек. Баға ұсынысын қазақша жіберіңіз. Бюджет әлі бекітілмеген."
+  },
+  "candidateIds": [],
+  "approvedExactPayload": true
+}
