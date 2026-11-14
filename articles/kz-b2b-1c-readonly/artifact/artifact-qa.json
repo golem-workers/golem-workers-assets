@@ -1,0 +1,96 @@
+{
+  "result": "PASS",
+  "cases": [
+    {
+      "case": "complete approved KZT snapshot",
+      "expected": "READY",
+      "actual": {
+        "status": "READY",
+        "total": "200000.00"
+      },
+      "pass": true
+    },
+    {
+      "case": "POST blocked",
+      "expected": "DENY_METHOD",
+      "actual": {
+        "status": "DENY_METHOD",
+        "total": null
+      },
+      "pass": true
+    },
+    {
+      "case": "foreign organization",
+      "expected": "DENY_SCOPE",
+      "actual": {
+        "status": "DENY_SCOPE",
+        "total": null
+      },
+      "pass": true
+    },
+    {
+      "case": "extra field",
+      "expected": "DENY_FIELDS",
+      "actual": {
+        "status": "DENY_FIELDS",
+        "total": null
+      },
+      "pass": true
+    },
+    {
+      "case": "partial response",
+      "expected": "HOLD_PARTIAL",
+      "actual": {
+        "status": "HOLD_PARTIAL",
+        "total": null
+      },
+      "pass": true
+    },
+    {
+      "case": "wrong report time",
+      "expected": "HOLD_TIME",
+      "actual": {
+        "status": "HOLD_TIME",
+        "total": null
+      },
+      "pass": true
+    },
+    {
+      "case": "mixed currency",
+      "expected": "HOLD_CURRENCY",
+      "actual": {
+        "status": "HOLD_CURRENCY",
+        "total": null
+      },
+      "pass": true
+    },
+    {
+      "case": "complete empty result",
+      "expected": "EMPTY_CONFIRMED",
+      "actual": {
+        "status": "EMPTY_CONFIRMED",
+        "total": "0.00"
+      },
+      "pass": true
+    },
+    {
+      "case": "failed read is unknown",
+      "expected": "UNKNOWN_READ",
+      "actual": {
+        "status": "UNKNOWN_READ",
+        "total": null
+      },
+      "pass": true
+    },
+    {
+      "case": "wrong source report",
+      "expected": "HOLD_SOURCE",
+      "actual": {
+        "status": "HOLD_SOURCE",
+        "total": null
+      },
+      "pass": true
+    }
+  ],
+  "scope": "10 deterministic synthetic policy cases; no 1C/LLM/live access validation"
+}

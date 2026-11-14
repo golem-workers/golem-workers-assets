@@ -1,0 +1,21 @@
+{
+  "organization": "DEMO-KZ-A",
+  "asOf": "2026-11-14T09:00:00+05:00",
+  "snapshotAt": "2026-11-14T09:02:00+05:00",
+  "complete": true,
+  "source": "approved-test-report-v1",
+  "rows": [
+    {
+      "document": "DEMO-101",
+      "organization": "DEMO-KZ-A",
+      "remaining": "120000.00",
+      "currency": "KZT"
+    },
+    {
+      "document": "DEMO-102",
+      "organization": "DEMO-KZ-A",
+      "remaining": "80000.00",
+      "currency": "KZT"
+    }
+  ]
+}
