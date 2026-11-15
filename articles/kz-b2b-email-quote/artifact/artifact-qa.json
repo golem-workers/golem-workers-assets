@@ -1,0 +1,99 @@
+{
+  "result": "PASS",
+  "casesFinished": 12,
+  "casesPassed": 12,
+  "scenario8": {
+    "goodsBeforeDiscountKzt": "180000.00",
+    "discountPercent": "8",
+    "discountKzt": "14400.00",
+    "goodsAfterDiscountKzt": "165600.00",
+    "finalPayableTotal": null
+  },
+  "scenario5": {
+    "goodsBeforeDiscountKzt": "180000.00",
+    "discountPercent": "5",
+    "discountKzt": "9000.00",
+    "goodsAfterDiscountKzt": "171000.00",
+    "finalPayableTotal": null
+  },
+  "cases": [
+    {
+      "case": "01-goods-arithmetic",
+      "actual": true,
+      "expected": true,
+      "pass_": true
+    },
+    {
+      "case": "02-email-has-unknown-terms",
+      "actual": "CLARIFY_TERMS",
+      "expected": "CLARIFY_TERMS",
+      "pass_": true
+    },
+    {
+      "case": "03-manager-cannot-approve-eight-percent",
+      "actual": "ESCALATE_PRICE",
+      "expected": "ESCALATE_PRICE",
+      "pass_": true
+    },
+    {
+      "case": "04-exact-complete-approved-revision",
+      "actual": "HAND_TO_HUMAN_FOR_SENDING",
+      "expected": "HAND_TO_HUMAN_FOR_SENDING",
+      "pass_": true
+    },
+    {
+      "case": "05-new-pricebook-observed",
+      "actual": "REFRESH_PRICEBOOK",
+      "expected": "REFRESH_PRICEBOOK",
+      "pass_": true
+    },
+    {
+      "case": "06-recipient-changed",
+      "actual": "REAPPROVE_REVISION",
+      "expected": "REAPPROVE_REVISION",
+      "pass_": true
+    },
+    {
+      "case": "07-document-text-changed",
+      "actual": "REAPPROVE_REVISION",
+      "expected": "REAPPROVE_REVISION",
+      "pass_": true
+    },
+    {
+      "case": "08-stale-stock",
+      "actual": "REFRESH_STOCK",
+      "expected": "REFRESH_STOCK",
+      "pass_": true
+    },
+    {
+      "case": "09-unknown-delivery",
+      "actual": "CLARIFY_TERMS",
+      "expected": "CLARIFY_TERMS",
+      "pass_": true
+    },
+    {
+      "case": "10-ambiguous-item",
+      "actual": "CLARIFY_LINE",
+      "expected": "CLARIFY_LINE",
+      "pass_": true
+    },
+    {
+      "case": "11-unhandled-currency",
+      "actual": "HOLD_CURRENCY",
+      "expected": "HOLD_CURRENCY",
+      "pass_": true
+    },
+    {
+      "case": "12-no-send-permission",
+      "actual": "AWAIT_SEND_PERMISSION",
+      "expected": "AWAIT_SEND_PERMISSION",
+      "pass_": true
+    }
+  ],
+  "limits": [
+    "Synthetic deterministic policy only;not email extraction,LLM accuracy,live Gmail/CRM or transactional send safety.",
+    "Fingerprint not digital signature;approval store authenticity/roles/time-of-use/retry safety require separate implementation.",
+    "Tax basis and delivery unknown in input;goods-only totals never final payable totals.",
+    "Thresholds5percent and15minutes are synthetic policy,not industry guidance."
+  ]
+}

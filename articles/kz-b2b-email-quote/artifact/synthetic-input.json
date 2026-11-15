@@ -1,0 +1,45 @@
+{
+  "synthetic": true,
+  "emailId": "TEST-MSG-001",
+  "dealId": "TEST-DEAL-001",
+  "recipient": "buyer@example.invalid",
+  "language": "ru",
+  "currency": "KZT",
+  "pricebookVersion": "PB-2026-11-15-r1",
+  "currentPricebookVersion": "PB-2026-11-15-r1",
+  "discountRuleVersion": "DISCOUNT-r1",
+  "discountPercent": 8,
+  "policy": {
+    "managerMaxDiscountPercent": 5,
+    "stockMaxAgeMinutes": 15
+  },
+  "lines": [
+    {
+      "sku": "P-100",
+      "quantity": 3,
+      "unit": "piece",
+      "unitPriceKzt": "48000.00",
+      "priceSourceRow": "PB-2026-11-15-r1:row-P100",
+      "exactMatch": true
+    },
+    {
+      "sku": "M-20",
+      "quantity": 2,
+      "unit": "kit",
+      "unitPriceKzt": "18000.00",
+      "priceSourceRow": "PB-2026-11-15-r1:row-M20",
+      "exactMatch": true
+    }
+  ],
+  "terms": {
+    "taxBasis": null,
+    "delivery": null,
+    "availability": null,
+    "deliveryDate": null,
+    "payment": null,
+    "validUntil": null,
+    "stockAgeMinutes": 2
+  },
+  "draftText": "INTERNAL TEST DRAFT. Goods at requested8percent=165600KZT;tax and delivery unknown. Not for sending.",
+  "approval": null
+}
