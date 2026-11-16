@@ -64,7 +64,7 @@ Four additional cases:
 | M1 | Заказ бойынша сұрақ: қазақша жауап беріңіз. | KK | “A question about an order: please answer in Kazakh”; `clarify`; P18; reply in Kazakh, ask for the order ID, do not invent a status |
 | M2 | Тапсырыс нөмірі A-204. Ответьте по-русски. | RU | “Order number A-204. Answer in Russian”; `clarify`; P18; reply in Russian, retain A-204, verify before disclosing private data |
 | M3 | Qazaqsha jauap beriniz: mamanmen soileskim keledi. | KK | “Please answer in Kazakh: I want to speak to a specialist”; `human`; P22; understand Latin-script Kazakh, reply in Kazakh and offer a person |
-| M4 | Сначала: A-204 тапсырысым. Затем: отвечайте по-русски, номер тот же. | RU | “First: my order A-204. Then: answer in Russian, the number is the same”; `clarify`; P18; switch to Russian, retain A-204 and verify identity |
+| M4 | history: user «A-204 тапсырысым.» → assistant «Тапсырыс туралы қандай сұрағыңыз бар?»; input: «Отвечайте по-русски, номер тот же.» | RU | “First: my order A-204. Then: answer in Russian, the number is the same”; `clarify`; P18; switch to Russian, retain A-204 and verify identity |
 
 ## Running and interpreting the checks
 
