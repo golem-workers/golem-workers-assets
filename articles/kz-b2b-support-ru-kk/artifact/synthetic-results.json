@@ -1,0 +1,317 @@
+{
+  "synthetic": true,
+  "results": [
+    {
+      "id": "01-ru",
+      "targetLanguage": "ru",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "01-kk",
+      "targetLanguage": "kk",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "02-ru",
+      "targetLanguage": "ru",
+      "scores": {
+        "facts": 0,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "02-kk",
+      "targetLanguage": "kk",
+      "scores": {
+        "facts": 0,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "03-ru",
+      "targetLanguage": "ru",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "03-kk",
+      "targetLanguage": "kk",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "04-ru",
+      "targetLanguage": "ru",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "04-kk",
+      "targetLanguage": "kk",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "05-ru",
+      "targetLanguage": "ru",
+      "scores": {
+        "facts": 0,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "05-kk",
+      "targetLanguage": "kk",
+      "scores": {
+        "facts": 0,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "06-ru",
+      "targetLanguage": "ru",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "06-kk",
+      "targetLanguage": "kk",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "07-ru",
+      "targetLanguage": "ru",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "07-kk",
+      "targetLanguage": "kk",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "08-ru",
+      "targetLanguage": "ru",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "08-kk",
+      "targetLanguage": "kk",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 0
+      },
+      "critical": true,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "09-ru",
+      "targetLanguage": "ru",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "09-kk",
+      "targetLanguage": "kk",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "10-ru",
+      "targetLanguage": "ru",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "10-kk",
+      "targetLanguage": "kk",
+      "scores": {
+        "facts": 0,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": true,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "M1",
+      "targetLanguage": "kk",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "M2",
+      "targetLanguage": "ru",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "M3",
+      "targetLanguage": "kk",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    },
+    {
+      "id": "M4",
+      "targetLanguage": "ru",
+      "scores": {
+        "facts": 2,
+        "language": 2,
+        "nextStep": 2,
+        "route": 2
+      },
+      "critical": false,
+      "synthetic": true,
+      "note": "Fabricatedrubricdemonstration:notamodelresponse."
+    }
+  ]
+}

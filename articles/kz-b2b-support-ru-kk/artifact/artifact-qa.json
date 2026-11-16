@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "scope": "Fixtureintegrity,pairedroute/sourceexpectations,arithmeticandhandoffstatepolicyONLY;noliveLLMorhelpdesk",
+  "inputCount": 24,
+  "pairedIntentCount": 10,
+  "extraMixedCases": 4,
+  "handoffStateProbes": 8,
+  "syntheticDemonstration": {
+    "ru": {
+      "passed": 10,
+      "total": 12
+    },
+    "kk": {
+      "passed": 8,
+      "total": 12
+    }
+  },
+  "combinedPercent": 75.0,
+  "criticalErrorsInSyntheticDemo": 2,
+  "pilotAccepted": false
+}
