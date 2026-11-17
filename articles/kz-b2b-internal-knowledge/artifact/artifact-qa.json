@@ -1,0 +1,153 @@
+{
+  "result": "PASS",
+  "synthetic": true,
+  "deterministicChecks": 16,
+  "passed": 16,
+  "checks": [
+    {
+      "id": "P01",
+      "kind": "current RU,not archive",
+      "expected": [
+        "TRAVEL-RU-2"
+      ],
+      "observed": [
+        "TRAVEL-RU-2"
+      ],
+      "pass": true
+    },
+    {
+      "id": "P02",
+      "kind": "current KK",
+      "expected": [
+        "TRAVEL-KK-2"
+      ],
+      "observed": [
+        "TRAVEL-KK-2"
+      ],
+      "pass": true
+    },
+    {
+      "id": "P03",
+      "kind": "authorized restricted source",
+      "expected": [
+        "RESERVE-RU-1"
+      ],
+      "observed": [
+        "RESERVE-RU-1"
+      ],
+      "pass": true
+    },
+    {
+      "id": "P04",
+      "kind": "denied restricted source",
+      "expected": [],
+      "observed": [],
+      "pass": true
+    },
+    {
+      "id": "P05",
+      "kind": "unknown identity denied",
+      "expected": [],
+      "observed": [],
+      "pass": true
+    },
+    {
+      "id": "P06",
+      "kind": "missing permission metadata denied",
+      "expected": [],
+      "observed": [],
+      "pass": true
+    },
+    {
+      "id": "P07",
+      "kind": "revoked access on next checked request",
+      "expected": [],
+      "observed": [],
+      "pass": true
+    },
+    {
+      "id": "P08",
+      "kind": "no supporting document",
+      "expected": [],
+      "observed": [],
+      "pass": true
+    },
+    {
+      "id": "P09",
+      "kind": "ambiguous active versions stop",
+      "expected": [],
+      "observed": [],
+      "pass": true
+    },
+    {
+      "id": "P10",
+      "kind": "malicious note does not change identity or permissions",
+      "expected": [],
+      "observed": [],
+      "pass": true
+    },
+    {
+      "id": "C01",
+      "kind": "allowed exact source metadata",
+      "expected": true,
+      "observed": true,
+      "pass": true
+    },
+    {
+      "id": "C02",
+      "kind": "archive citation rejected",
+      "expected": false,
+      "observed": false,
+      "pass": true
+    },
+    {
+      "id": "C03",
+      "kind": "wrong section rejected",
+      "expected": false,
+      "observed": false,
+      "pass": true
+    },
+    {
+      "id": "C04",
+      "kind": "invented quote rejected",
+      "expected": false,
+      "observed": false,
+      "pass": true
+    },
+    {
+      "id": "C05",
+      "kind": "cached restricted citation rechecked for A",
+      "expected": false,
+      "observed": false,
+      "pass": true
+    },
+    {
+      "id": "C06",
+      "kind": "cached restricted citation rechecked after revocation",
+      "expected": false,
+      "observed": false,
+      "pass": true
+    }
+  ],
+  "semanticCounterexample": {
+    "answer": "Согласование превышения не требуется.",
+    "citation": {
+      "id": "TRAVEL-RU-2",
+      "version": 2,
+      "section": "4",
+      "quote": "Учебный лимит гостиницы — 30 000 KZT за ночь. Превышение требует отдельного согласования."
+    },
+    "metadataAccepted": true,
+    "humanVerdict": "REJECT:the quote states that exceeding the limit requires separate approval;the answer contradicts it.",
+    "automaticSemanticVerification": false
+  },
+  "notMeasured": [
+    "LLM quality",
+    "retrieval recall",
+    "real identity provider",
+    "live cache revocation",
+    "production isolation",
+    "Kazakhstan compliance"
+  ],
+  "scope": "Metadata/access design illustration only;the counterexample intentionally passes metadata validation and must fail human semantic review."
+}
