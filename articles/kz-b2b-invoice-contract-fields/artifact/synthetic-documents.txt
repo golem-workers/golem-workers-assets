@@ -1,0 +1,21 @@
+SYNTHETIC DOCUMENTS. NOT CUSTOMER DATA. NOT AN INVOICE FOR ACTUAL PAYMENT.
+DEMO-INV-09-r1 / page1 / invoice request / 2026-11-22 / DEMO-009
+Supplier: DEMO-SUP-A. This is a fictional master-data key, not a BIN.
+Buyer: DEMO-BUYER-A. Currency: KZT.
+Line A: 10 units x12500 KZT =125000 KZT.
+Line B: 2 units x7500 KZT =15000 KZT.
+Printed total:148000 KZT.
+No additional tax,discount,freight or other adjustment is present in this synthetic example.
+Expected arithmetic:140000 KZT. Difference:8000 KZT.
+Do not "repair" the printed total or infer an 8000KZT charge.
+The clean fixture uses a separate corrected synthetic total140000KZT for testing only.
+
+DEMO-CONTRACT-09-r1 / page2 / clause4.2
+Payment: within10 working days after signed acceptance.
+No actual acceptance date or agreed working-day calendar is supplied.
+Extract the literal clause. Calculated due date:null.
+This is not an interpretation of Kazakhstan law or a recommendation for contract terms.
+
+OCR fault variant:14O000 instead of140000; preserve original spelling and send to review.
+Rescan variant: new file hash, same supplier DEMO-SUP-A,number DEMO-009,date2026-11-22.
+Changed-bank variant: bank destination differs from approved supplier record; require separate verification.
