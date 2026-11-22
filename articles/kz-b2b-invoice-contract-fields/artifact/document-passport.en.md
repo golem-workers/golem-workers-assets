@@ -37,7 +37,7 @@ DEMO-CONTRACT-09-r1, page 2, clause 4.2: within 10 working days after signed acc
 
 ## Python 3
 
-Download the three files into one directory. Run python 3 document_fixture.py. Expected result: result: PASS, passed: 10, total: 10. This is a deterministic check of pre-extracted fields; it calls no OCR, LLM, ERP, bank or network.
+Download the three files into one directory. Run python3 document_fixture.py. Expected result: result: PASS, passed: 10, total: 10. This is a deterministic check of pre-extracted fields; it calls no OCR, LLM, ERP, bank or network.
 
 - [document_fixture.py](document_fixture.py)
 - [synthetic-documents.txt](synthetic-documents.txt)

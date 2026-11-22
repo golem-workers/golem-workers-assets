@@ -37,7 +37,7 @@ DEMO-CONTRACT-09-r1, страница 2, пункт 4.2: «в течение 10 
 
 ## Python 3
 
-Скачайте три файла рядом. Выполните python 3 document_fixture.py. Ожидается result: PASS, passed: 10, total: 10. Это детерминированная проверка уже подготовленных полей; OCR, LLM, ERP, банк и сеть не вызываются.
+Скачайте три файла рядом. Выполните python3 document_fixture.py. Ожидается result: PASS, passed: 10, total: 10. Это детерминированная проверка уже подготовленных полей; OCR, LLM, ERP, банк и сеть не вызываются.
 
 - [document_fixture.py](document_fixture.py)
 - [synthetic-documents.txt](synthetic-documents.txt)

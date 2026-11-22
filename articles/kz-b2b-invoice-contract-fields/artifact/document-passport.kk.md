@@ -37,7 +37,7 @@ DEMO-CONTRACT-09-r1, 2-бет, 4.2-тармақ: «қабылдау актісі
 
 ## Python 3
 
-Үш файлды бір бумаға жүктеңіз. python 3 document_fixture.py пәрменін орындаңыз. Күтілетін нәтиже: result: PASS, passed: 10, total: 10. Бұл дайын өрістердің детерминирленген тексеруі; OCR, LLM, ERP, банк не желі қолданылмайды.
+Үш файлды бір бумаға жүктеңіз. python3 document_fixture.py пәрменін орындаңыз. Күтілетін нәтиже: result: PASS, passed: 10, total: 10. Бұл дайын өрістердің детерминирленген тексеруі; OCR, LLM, ERP, банк не желі қолданылмайды.
 
 - [document_fixture.py](document_fixture.py)
 - [synthetic-documents.txt](synthetic-documents.txt)
