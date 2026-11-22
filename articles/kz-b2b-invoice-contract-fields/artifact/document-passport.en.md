@@ -18,15 +18,15 @@ Synthetic teaching set for an incoming payment request and contract clause. Not 
 
 Teaching invoice DEMO-009, 22 November 2026, page 1, supplier DEMO-SUP-A is a fictional master-data key, not a BIN. Lines: 10 × 12500 = 125000 KZT; 2 × 7500 = 15000 KZT. Line sum 140000 KZT; printed 148000 KZT; difference 8000 KZT. No tax, freight, discount or other adjustment exists in this example. Route AMOUNT_MISMATCH. Do not repair the source; request an explanation or corrected document.
 
-## DEMO-CONTRACT-09-r 1
+## DEMO-CONTRACT-09-r1
 
-DEMO-CONTRACT-09-r 1, page 2, clause 4.2: within 10 working days after signed acceptance. No acceptance date or agreed working-day calendar is supplied. Calculated due date: null; route CLARIFY_DEADLINE. The responsible reviewer must check applicable revisions and amendments.
+DEMO-CONTRACT-09-r1, page 2, clause 4.2: within 10 working days after signed acceptance. No acceptance date or agreed working-day calendar is supplied. Calculated due date: null; route CLARIFY_DEADLINE. The responsible reviewer must check applicable revisions and amendments.
 
 ## Case → expected route
 
 - 1. Clean source-checked packet → `READY_FOR_HUMAN_REVIEW`
 - 2. Printed 148000 vs lines 140000 → `AMOUNT_MISMATCH`
-- 3. Letter O in 14O 000 → `CHECK_NUMBER`
+- 3. Letter O in 14O000 → `CHECK_NUMBER`
 - 4. Missing supplier → `MISSING_FIELD`
 - 5. Different scan of same invoice → `CHECK_DUPLICATE`
 - 6. Currency absent → `MISSING_FIELD`
