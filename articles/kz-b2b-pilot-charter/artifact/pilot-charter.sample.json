@@ -1,0 +1,20 @@
+{
+  "synthetic": true,
+  "process": "open test orders to local clarification-list draft",
+  "input": "30 synthetic rows:20 ordinary,5 missing date,5 conflicting fields;not model results",
+  "output": "local draft with source order ID,question and reviewer;no invented dates",
+  "interfaces": ["order-register-test-read-only"],
+  "excluded": ["send mail", "change order", "promise delivery", "payment"],
+  "external_send": false,
+  "owners": {"process":"synthetic buyer role","reviewer":"synthetic sales reviewer role","it":"synthetic IT role","integrator":"synthetic integrator role"},
+  "data_rule":"synthetic data only;working-data handling needs separate agreement",
+  "manual_fallback":"staff reviewer reads the test register directly",
+  "change_owner":"synthetic process owner and integrator",
+  "review_date":"agree after dependency investigation;not a commercial deadline",
+  "success_rule":"agree expected behavior and acceptance evidence before real tests",
+  "scope_version":"v1",
+  "evidence_scope_version":"v1",
+  "open_dependencies":[],
+  "pilot_decision":"pending",
+  "evidence":{"access":"synthetic-test-read-receipt-v1","integration":"","acceptance":"","training":"","support_owner":"","rollout_authorization":""}
+}
