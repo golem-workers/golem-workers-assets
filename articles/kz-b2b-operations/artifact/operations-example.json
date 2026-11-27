@@ -1,0 +1,158 @@
+{
+  "synthetic": true,
+  "notLiveTest": true,
+  "timeZone": "Asia/Almaty",
+  "detectedAt": "2026-11-27T08:30:00+05:00",
+  "operation": "proposal-draft-only;no customer messages or payments",
+  "queue": [
+    {
+      "id": "T01",
+      "outcome": "confirmed"
+    },
+    {
+      "id": "T02",
+      "outcome": "confirmed"
+    },
+    {
+      "id": "T03",
+      "outcome": "confirmed"
+    },
+    {
+      "id": "T04",
+      "outcome": "absent"
+    },
+    {
+      "id": "T05",
+      "outcome": "absent"
+    },
+    {
+      "id": "T06",
+      "outcome": "unknown"
+    },
+    {
+      "id": "T07",
+      "outcome": "unknown"
+    },
+    {
+      "id": "T08",
+      "outcome": "unknown"
+    }
+  ],
+  "roles": [
+    "B",
+    "O",
+    "T",
+    "D"
+  ],
+  "raci": {
+    "receive_signal": {
+      "B": "I",
+      "O": "A/R",
+      "T": "C",
+      "D": "I"
+    },
+    "contain_and_manual": {
+      "B": "C",
+      "O": "A/R",
+      "T": "R",
+      "D": "I"
+    },
+    "repair_api_or_model": {
+      "B": "I",
+      "O": "C",
+      "T": "A/R",
+      "D": "C"
+    },
+    "approve_business_rule": {
+      "B": "A",
+      "O": "I",
+      "T": "C",
+      "D": "R"
+    },
+    "reconcile_tasks": {
+      "B": "A",
+      "O": "R",
+      "T": "C",
+      "D": "C"
+    },
+    "authorize_return": {
+      "B": "A",
+      "O": "R",
+      "T": "C",
+      "D": "C"
+    }
+  },
+  "cases": [
+    {
+      "id": "API_SCHEMA",
+      "observed": "HTTP200;required customer field absent",
+      "initialState": "STOPPED",
+      "repairEvidence": [
+        "schemaMatched"
+      ],
+      "commonEvidence": [
+        "testsPassed",
+        "manualPathVerified",
+        "restartAuthorized"
+      ],
+      "rollbackAvailable": true
+    },
+    {
+      "id": "MODEL_RETIRED",
+      "observed": "current model retired;old model unavailable",
+      "initialState": "STOPPED",
+      "repairEvidence": [
+        "replacementTested",
+        "dataBoundaryApproved"
+      ],
+      "commonEvidence": [
+        "testsPassed",
+        "manualPathVerified",
+        "restartAuthorized"
+      ],
+      "rollbackAvailable": false
+    },
+    {
+      "id": "RULE_CHANGE",
+      "observed": "price-v7 returned after price-v8 effective",
+      "initialState": "STOPPED",
+      "repairEvidence": [
+        "approvedCurrentRule",
+        "sourceIndexCacheChecked"
+      ],
+      "commonEvidence": [
+        "testsPassed",
+        "manualPathVerified",
+        "restartAuthorized"
+      ],
+      "rollbackAvailable": false
+    }
+  ],
+  "coverage": {
+    "hours": "TO_AGREE",
+    "holidays": "TO_AGREE",
+    "acknowledgment": "TO_AGREE",
+    "nextUpdate": "TO_AGREE",
+    "sla": "NOT_PROMISED"
+  },
+  "namedContacts": {
+    "B": "FILL",
+    "O": "FILL",
+    "T": "FILL",
+    "D": "FILL",
+    "backup": "FILL"
+  },
+  "recordFields": [
+    "signal_and_impact",
+    "versions",
+    "containment_and_proof",
+    "manual_owner_and_backup",
+    "queue_outcomes",
+    "repair_and_authorization",
+    "RU_KK_tests",
+    "restart_scope_and_observer",
+    "next_update",
+    "handoff_acknowledged"
+  ],
+  "limits": "Declared-state checks only;no live API/model/CRM,security or customer deployment test;no authenticity check."
+}
