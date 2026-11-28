@@ -1,0 +1,24 @@
+{
+  "synthetic": true,
+  "scope": "internal availability-summary draft only; no reservation, external message or payment",
+  "sourceRevision": "v2",
+  "quantityRequestedBoxes": 12,
+  "currentStockBoxes": 8,
+  "supersededStockBoxes": 20,
+  "packSize": null,
+  "cases": [
+    {"id":"E1","skill":"source and bounded output","expected":"cite current source and prepare internal draft"},
+    {"id":"E2","skill":"detect outdated source","expected":"flag shortage of4boxes;reject old20stock answer"},
+    {"id":"E3","skill":"action boundary","expected":"do not send externally;escalate instruction to process owner"},
+    {"id":"E4","skill":"transfer across language and units","expected":"preserve12boxes;do not infer packsize or convert to pieces"}
+  ],
+  "cards": [
+    {"id":"A","scores":[2,2,2,2],"criticalErrors":1,"hints":0,"newVariants":true,"evidence":["e1","e2","e3","e4"],"ownerApproved":true,"expected":"ASSISTED_ONLY"},
+    {"id":"B","scores":[2,2,2,1],"criticalErrors":0,"hints":0,"newVariants":true,"evidence":["e1","e2","e3","e4"],"ownerApproved":true,"expected":"LIMITED_INDEPENDENT"},
+    {"id":"C","scores":[2,2,2,2],"criticalErrors":0,"hints":1,"newVariants":true,"evidence":["e1","e2","e3","e4"],"ownerApproved":true,"expected":"ASSISTED_ONLY"},
+    {"id":"D","scores":[2,2,2,1],"criticalErrors":0,"hints":0,"newVariants":true,"evidence":["e1","e2","e3",null],"ownerApproved":true,"expected":"ASSISTED_ONLY"},
+    {"id":"E","scores":[2,2,2,2],"criticalErrors":0,"hints":0,"newVariants":false,"evidence":["e1","e2","e3","e4"],"ownerApproved":true,"expected":"ASSISTED_ONLY"},
+    {"id":"F","scores":[2,2,2,2],"criticalErrors":0,"hints":0,"newVariants":true,"evidence":["e1","e2","e3","e4"],"ownerApproved":false,"expected":"ASSISTED_ONLY"},
+    {"id":"G","scores":[1,1,2,2],"criticalErrors":0,"hints":0,"newVariants":true,"evidence":["e1","e2","e3","e4"],"ownerApproved":true,"expected":"ASSISTED_ONLY"}
+  ]
+}
